@@ -3,14 +3,15 @@ import sys
 if len(sys.argv) < 2:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
+
 def get_book_text(file_path):   
     with open(file_path) as f:
         file_contents = f.read()
     return file_contents
 
-file_path = sys.argv #This gives access to the file path for the report generator.
+file_path = sys.argv[1] #This gives access to the file path for the report generator.
 
-book_text = get_book_text(sys.argv) # This give global access to the Book Text.
+book_text = get_book_text(sys.argv[1]) # This give global access to the Book Text.
 #print(book_text) 
 #^ --------------Release for debugging
 
